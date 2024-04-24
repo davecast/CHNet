@@ -208,6 +208,109 @@
   visibility: hidden;
 }
 
+/* ZONE */
+.section_zone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_zone_background {
+  max-width: 100%;
+}
+.section_zone_background-mobile {
+  max-width: 100%;
+  display: none;
+  visibility: hidden;
+}
+.section_zone_wrapper {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.section_zone_title {
+  font-size: 5vw;
+  line-height: 6vw;
+  margin: 0 0 2vw;
+}
+
+/* TESTING */
+.section_testing {
+  padding: 15vh 0;
+  background-image: url(../assets/images/testing-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section_testing_wrapper {
+  display: grid;
+  grid-template: 1fr / 520px 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+.section_testing_text {
+  font-size: 2.75rem;
+  line-height: 3.25rem;
+}
+.section_testing_test {
+  background-color: var(--black-header);
+  border-radius: 4rem;
+  padding: 4rem 3rem;
+}
+.section_testing_test_title {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0 0 3.5rem;
+  text-align: center;
+}
+.section_testing_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_testing_button {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--white-b);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 12px 2px var(--primary);
+  transition: all 0.25s ease-in;
+}
+.section_testing_button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.section_testing_button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -2px;
+  left: -2px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  animation: btnRing 2s linear infinite;
+}
+@keyframes btnRing {
+  60%,
+  100% {
+    height: calc(100% + 60px);
+    width: calc(100% + 60px);
+    top: -32px;
+    left: -32px;
+    opacity: 0;
+  }
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 1280px) {
   .section_tv {
@@ -257,6 +360,19 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .section_zone_background {
+    display: none;
+    visibility: hidden;
+  }
+  .section_zone_background-mobile {
+    display: inherit;
+    visibility: visible;
+  }
+  .section_zone_title {
+    font-size: 10vw;
+    line-height: 12vw;
+    margin: 0 0 6vw;
+  }
   .section_banner {
     height: 650px;
   }
