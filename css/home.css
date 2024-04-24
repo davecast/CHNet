@@ -1,0 +1,357 @@
+.section_banner {
+  height: 700px;
+}
+#splideBanner,
+#splideBanner .splide__track {
+  height: 700px;
+}
+.section_banner_slide {
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_banner_slide img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section_banner_wrapper {
+  position: absolute;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1024px;
+  margin-top: 170px;
+}
+.section_banner_wrapper-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section_banner_wrapper-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.section_banner_hash {
+  position: absolute;
+  z-index: 5;
+  color: #d1d1d1;
+  bottom: 4.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 2px var(--black);
+}
+.section_banner .splide__pagination {
+  bottom: 2em;
+  gap: 0.25rem;
+}
+.section_banner .splide__pagination__page {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 8px var(--black);
+  opacity: 1;
+}
+.section_banner .splide__pagination__page:focus {
+  outline: none;
+}
+.section_banner .splide__pagination__page.is-active {
+  background: var(--primary);
+  transform: scale(1);
+}
+.section_banner_image-mobile {
+  display: none;
+  visibility: hidden;
+}
+
+/* BANNER SMOOTH */
+.section_smooth {
+  height: 75px;
+  background-image: url(../assets/images/scroll-smoth.jpg);
+  background-attachment: fixed;
+  background-position: inherit;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+/* RESIDENTIAL */
+.section_residential {
+  padding: 3.5rem 0;
+}
+.section_residential_plans {
+  margin: 0 0 4rem;
+}
+.plan {
+  padding: 2rem 2.5rem;
+  background-color: var(--black);
+  border-radius: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plan_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.plan_name,
+.plan_mbps {
+  max-width: 240px;
+  margin: 0 auto;
+}
+.plan_separator {
+  height: 1px;
+  width: 100%;
+  max-width: 260px;
+  background-color: var(--white-b);
+  margin: 1.5rem auto;
+}
+.plan_mbps {
+  margin: 0 auto 2rem;
+}
+.plan_features {
+}
+.plan_features-last {
+  margin: 0 0 3.5rem;
+}
+.plan_feature {
+  position: relative;
+  color: var(--white-b);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto 1rem;
+}
+.plan_feature img {
+  width: 28px;
+  height: 28px;
+}
+
+.plan_for {
+  color: var(--white-b);
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  margin: 0.5rem 0 1.5rem;
+}
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown img {
+  width: 4rem;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: all 0.25s ease-in;
+}
+.dropdown img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--primary);
+}
+/* BREAKER */
+.section_breaker {
+  overflow: hidden;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  background-image: url(../assets/images/bracker.jpg);
+  padding: 3rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* CORPORATION */
+.section_corporation {
+  background-image: url(../assets/images/corporations.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+/* TV */
+.section_tv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_tv_background {
+  max-width: 100%;
+}
+.section_tv_wrapper {
+  position: absolute;
+  width: 100%;
+}
+.section_tv_overlay {
+  max-width: 768px;
+  border-radius: 4rem;
+  padding: 5rem;
+  background-color: var(--black-header);
+}
+
+.section_tv_background-mobile {
+  display: none;
+  visibility: hidden;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+  .section_tv {
+  }
+
+  .section_tv_wrapper br {
+    display: none;
+  }
+  .section_tv_overlay {
+    max-width: 580px;
+    border-radius: 3rem;
+    padding: 3.5rem;
+    background-color: var(--black-header);
+  }
+}
+@media screen and (max-width: 1080px) {
+  .section_banner_wrapper {
+    max-width: calc(100% - 4rem);
+  }
+  .section_residential_plans {
+    max-width: 380px;
+    margin: 0 auto 4rem;
+  }
+  .section_residential_plans .splide__arrow {
+    background-color: transparent;
+    width: 3em;
+    height: 3em;
+  }
+  .section_residential_plans .splide__arrow svg {
+    height: 3em;
+    width: 3rem;
+    fill: #d1d1d1;
+  }
+  .section_residential_plans .splide__arrow--prev {
+    left: -4rem;
+  }
+  .section_residential_plans .splide__arrow--next {
+    right: -4rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .section_header {
+    flex-direction: column;
+  }
+  .section_breaker br {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section_banner {
+    height: 650px;
+  }
+  #splideBanner,
+  #splideBanner .splide__track {
+    height: 650px;
+  }
+  .section_banner_wrapper {
+    margin: 0;
+    top: 130px;
+    max-width: calc(100% - 2rem);
+  }
+  .section_banner_wrapper-left {
+    justify-content: center;
+  }
+  .section_banner_wrapper-right {
+    justify-content: center;
+  }
+  .section_smooth {
+    background-size: 768px;
+  }
+  .section_banner .splide__pagination {
+    display: none;
+  }
+  .section_banner_image {
+    display: none;
+    visibility: hidden;
+  }
+  .section_banner_image-mobile {
+    display: initial;
+    visibility: visible;
+  }
+  .section_banner_hash {
+    bottom: 1.5rem;
+  }
+  .section_breaker {
+    background-image: url(../assets/images/breaker-mobile.jpg);
+  }
+  .section_tv_background {
+    display: none;
+    visibility: hidden;
+  }
+  .section_tv_background-mobile {
+    display: initial;
+    visibility: visible;
+    width: 100%;
+    height: 980px;
+    object-fit: cover;
+  }
+  .section_tv_overlay {
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 2rem;
+  }
+  .section_tv {
+    align-items: flex-end;
+  }
+  .section_tv_wrapper {
+    bottom: 8rem;
+  }
+  .section_corporation br {
+    display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .section_residential_plans {
+    width: 100%;
+    max-width: calc(100% - 5rem);
+  }
+  .plan {
+    padding: 2rem 1.5rem;
+  }
+  .plan_name,
+  .plan_mbps {
+    max-width: 180px;
+  }
+  .plan_features-last {
+    margin: 0 0 1.5rem;
+  }
+  .section_residential_plans .splide__arrow--prev {
+    left: -3.5rem;
+  }
+  .section_residential_plans .splide__arrow--next {
+    right: -3.5rem;
+  }
+  .section_residential_plans .splide__arrow {
+    background-color: transparent;
+    width: 2em;
+    height: 2em;
+  }
+  .plan_feature {
+    font-size: 0.875rem;
+  }
+  .plan_feature img {
+    width: 18px;
+    height: 18px;
+  }
+}

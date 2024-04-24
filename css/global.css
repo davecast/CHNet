@@ -1,0 +1,295 @@
+@font-face {
+  font-family: "Atyp Display";
+  src: url("../assets/webfonts/AtypDisplay-Regular.woff2") format("woff2"),
+    url("../assets/webfonts/AtypDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  src: url("../assets/webfonts/Ruberoid-ExtraBold.woff2") format("woff2"),
+    url("../assets/webfonts/Ruberoid-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  src: url("../assets/webfonts/Ruberoid-Bold.woff2") format("woff2"),
+    url("../assets/webfonts/Ruberoid-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  src: url("../assets/webfonts/Ruberoid-Medium.woff2") format("woff2"),
+    url("../assets/webfonts/Ruberoid-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  src: url("../assets/webfonts/Ruberoid-Regular.woff2") format("woff2"),
+    url("../assets/webfonts/Ruberoid-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chnet";
+  src: url("../assets/webfonts/chnet.eot");
+  src: url("../assets/webfonts/chnet.eot") format("embedded-opentype"),
+    url("../assets/webfonts/chnet.ttf") format("truetype"),
+    url("../assets/webfonts/chnet.woff") format("woff"),
+    url("../assets/webfonts/chnet.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --primary: #01df01;
+  --white-b: #eff1f3;
+  --black: #101010;
+  --black-header: rgb(16 16 16 / 75%);
+  --black-header-stiky: rgb(16 16 16 / 100%);
+}
+
+[class^="chnet-"],
+[class*=" chnet-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "chnet" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ruberoid";
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/*ICONS*/
+.chnet-close:before {
+  content: "\e900";
+}
+.chnet-bar:before {
+  content: "\e901";
+}
+
+/* COLORS */
+.t-white {
+  color: var(--white-b);
+}
+.t-black {
+  color: var(--black);
+}
+.t-primary {
+  color: var(--primary);
+}
+
+/*TEXTOS*/
+.t-center {
+  text-align: center;
+}
+.normal {
+  font-weight: 400;
+}
+.bold {
+  font-weight: bold;
+}
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.paragraph-2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.head-big {
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+.head-one {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.head-two {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.title-section {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--white-b);
+}
+
+/*BUTTON*/
+
+.btn {
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease-in;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--primary);
+}
+.btn-green {
+  background-color: var(--primary);
+  color: var(--black);
+}
+.btn-fullwidth {
+  width: 100%;
+}
+.btn-small {
+  padding: 0.4375rem 1.625rem;
+  font-size: 0.875rem;
+  border-radius: 2.5rem;
+}
+.btn-medium {
+  padding: 1rem 2rem;
+  font-size: 1em;
+  line-height: 1rem;
+  border-radius: 2.5rem;
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.btn-icon img,
+.btn-icon svg {
+  width: 1.625rem;
+  height: 1.625rem;
+}
+
+/* GENERAL */
+.mb-4 {
+  margin-bottom: 2rem;
+}
+.container {
+  width: calc(100% - 4rem);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.section {
+}
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+}
+.separator {
+  height: 3rem;
+  width: 100%;
+}
+.separator-green {
+  background-color: var(--primary);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+  .head-big {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head-big {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header_container {
+    max-width: calc(100% - 4rem);
+    margin: 0 auto;
+  }
+  .btn-small {
+    padding: 0.2188rem 0.825rem;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    border-radius: 2.5rem;
+  }
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-icon img {
+    width: 1rem;
+    height: 1rem;
+  }
+  .head-one {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+  .head-two {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+  .title-section {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .paragraph {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .paragraph-2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
